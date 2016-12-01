@@ -10,7 +10,7 @@ import fileManager.Read_Write_Manager;
  */
 public class EventManager {
 	Read_Write_Manager manager;
-	EventManager(String file){
+	public EventManager(String file){
 		manager = new Read_Write_Manager(file);
 	}
 	
@@ -20,6 +20,9 @@ public class EventManager {
 	
 	public String getFirstEvent() {
 		return manager.readNextLine();
+	}
+	public void close(){
+		manager.close();
 	}
 	
 }

@@ -17,12 +17,13 @@ public class Escritor {
 	
 	public void write(String message) throws IOException {
 		LocalDate time = LocalDate.now();
-		file.write(time + " " + message + "\n");
+		file.write(time + ": " + message + "\n");
 	}
 	public void write(String message, String info) throws IOException {
 		LocalDate time = LocalDate.now();
 		file.write(time + " " + message + ":" + info + "\n");
 	}
+	
 	public void closeFile() throws IOException {
 		file.close();
 	}

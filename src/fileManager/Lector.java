@@ -20,10 +20,14 @@ public class Lector {
 		file = new FileReader(fileOut);
 		buffer = new BufferedReader(file);
 	}
-	
 	public String readNextLine() throws IOException {
 		return buffer.readLine();
 	}
+	public String readLinesWithDate(String date) {
+		
+		return "No implementado";
+	}
+	
 	public void closeFile() throws IOException {
 		buffer.close();
 		file.close();
